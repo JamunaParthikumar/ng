@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Makeup Assistant</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page 1: Greeting and Occasion Selection -->
+    <div class="page" id="page1">
+      <h2>Welcome to the Virtual Makeup Assistant 💄</h2>
+      <p style="font-size: 32px">
+        Welcome to your Virtual Makeup Assistant! Discover your perfect look
+        with our innovative tools and expert guidance. Get ready to unlock your
+        beauty potential!
+      </p>
+
+      <label for="occasion">Choose your occasion:</label>
+      <select id="occasion">
+        <option value="wedding">Wedding</option>
+        <option value="party">Party</option>
+        <option value="interview">Interview</option>
+        <option value="casual">Casual Outing</option>
+        <option value="anniversaries">Anniversaries</option>
+        <option value="reunions">Reunions</option>
+        <option value="graduation parties">Graduation Parties</option>
+        <option value="conferences">Conferences</option>
+        <option value="sports">Sports</option>
+        <option value="fashion events">Fashion Events</option>
+      </select>
+      <button onclick="goToPage(2)">Next</button>
+    </div>
+
+    <!-- Page 2: Webcam Detection and Face Analysis -->
+    <div class="page" id="page2">
+      <h2>Face Detection in Progress...</h2>
+      <video id="video" autoplay></video>
+      <canvas id="canvas" style="display: none"></canvas>
+      <p id="notification"></p>
+      <button id="next2" style="display: none" onclick="goToPage(3)">
+        Next
+      </button>
+    </div>
+
+    <!-- Page 3: Product Recommendation -->
+    <div class="page" id="page3">
+      <h2>Recommended Products for You</h2>
+      <div id="products">
+        <!-- Products will be added dynamically -->
+      </div>
+      <button onclick="goToPage(4)">
+        Can you select these recommended products to do your makeup virtually?
+      </button>
+    </div>
+
+    <!-- Page 4: Virtual Try-On Result -->
+    <div class="page" id="page4">
+      <h2>See your Virtual Makeup Look💄</h2>
+      <img id="makeupImage" alt="Your makeup look will appear here" />
+    </div>
+
+    <!-- Page 5: Feedback Page -->
+    <div class="page" id="page5">
+      <h2>Give Your Feedback</h2>
+      <textarea
+        id="feedback"
+        placeholder="How was your virtual try-on experience?"
+      ></textarea>
+      <button onclick="goToPage(6)">Submit Feedback</button>
+    </div>
+
+    <!-- Page 6: Ending Page -->
+    <div class="page" id="page6">
+      <h1>Thank You for Using Virtual Makeup Assistant!☺️</h1>
+      <p>We hope you enjoyed the experience. Stay beautiful and safe! 🌟</p>
+      <button onclick="goToPage(1)">Try More Makeup Looks 💅</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

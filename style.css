@@ -1,0 +1,81 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ff198c, #ff89c8);
+  animation: fadeIn 2s ease-in;
+}
+
+.page {
+  display: none;
+  padding: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.page.active {
+  display: block;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+select,
+button,
+textarea {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #000000;
+}
+
+button {
+  background-color: #e100ff;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ea91ed;
+}
+
+video {
+  width: 320px;
+  height: 240px;
+  border-radius: 12px;
+  border: 2px solid #000000;
+}
+
+#products img {
+  width: 100px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#makeupImage {
+  width: 300px;
+  height: auto;
+  border: 3px solid #000000;
+  border-radius: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
